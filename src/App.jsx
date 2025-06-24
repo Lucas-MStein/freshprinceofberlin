@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import TikTokGallery from './components/TikTokGallery';
+import ImageGallery from './components/ImageGallery';
 import About from './components/About';
 import SocialLinks from './components/SocialLinks';
 import Footer from './components/Footer';
@@ -15,7 +15,7 @@ function App() {
             {/* Hauptinhalt mit Abstand zum Header */}
             <main className>
                 <Hero />
-                <TikTokGallery />
+                <ImageGallery />
                 <About />
                 <SocialLinks />
             </main>

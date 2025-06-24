@@ -1,9 +1,31 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import AboutImage from '../assets/Leo5.jpeg';
 
 const About = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.unobserve(sectionRef.current); // nur einmal beobachten
+                }
+            },
+            { threshold: 0.3 }
+        );
+
+        if (sectionRef.current) observer.observe(sectionRef.current);
+    }, []);
+
     return (
-        <section id="about" className="bg-[#0b0f1a] py-16 px-6 md:px-12">
+        <section
+            id="about"
+            ref={sectionRef}
+            className={`bg-[#0b0f1a] py-16 px-6 md:px-12 transition-all duration-1000 ease-in-out transform 
+                       ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+        >
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
                 {/* Bild von Leo */}
                 <div className="md:w-1/2">

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { FaInstagram, FaTiktok, FaYoutube, FaTwitch } from 'react-icons/fa';
-import HeroImage from '../assets/Leo3.jpeg';
+import HeroImage from '../assets/Leo6.jpeg';
 
 const Hero = () => {
     const sectionRef = useRef(null);
@@ -68,7 +68,7 @@ const Hero = () => {
                         <FaTiktok /> TikTok
                     </a>
                     <a
-                        href="#"
+                        href="https://www.youtube.com/@freshprinceofberlin"
                         className="flex items-center gap-2 px-5 py-2 rounded-full bg-red-600 text-white
                                    hover:bg-red-700 transition duration-300 ease-in-out transform hover:scale-105 hover:brightness-110"
                     >
