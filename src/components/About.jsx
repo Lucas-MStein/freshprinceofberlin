@@ -7,7 +7,7 @@ const About = () => {
                 {/* Bild von Leo */}
                 <div className="md:w-1/2">
                     <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB0ZCr8nHDQEHzpmdtmVyJgIJU_uY67ss3Yw&s"
+                        src="src/assets/Leo5.jpeg"
                         alt="Leo"
                         className="rounded-xl shadow-xl object-cover w-full h-auto"
                     />
