@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { FaInstagram, FaTiktok, FaYoutube, FaTwitch } from 'react-icons/fa';
+import HeroImage from '../assets/Leo3.jpeg';
 
 const Hero = () => {
     const sectionRef = useRef(null);
@@ -30,7 +31,7 @@ const Hero = () => {
         <section id="hero" className="relative w-full h-screen">
             {/* Hintergrundbild */}
             <img
-                src="src/assets/Leo3.jpeg"
+                src={HeroImage}
                 alt="Berlin"
                 className="absolute inset-0 w-full h-full object-cover"
             />
