@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { FaInstagram, FaTiktok, FaYoutube, FaTwitch } from 'react-icons/fa';
-import HeroImage from '../assets/Leo6.jpeg';
+import HeroImage from '../assets/Leo14.jpeg';
 
 const Hero = () => {
     const sectionRef = useRef(null);
@@ -52,36 +52,36 @@ const Hero = () => {
                     Leo aka freshprinceofberlin – bekannt für virale Comedy-Skits und Urban Culture.
                 </p>
 
-                <div className="mt-6 flex flex-wrap gap-4 justify-center">
+                <div className="mt-8 flex flex-wrap gap-4 justify-center">
                     <a
-                        href="#"
-                        className="flex items-center gap-2 px-5 py-2 rounded-full bg-pink-500 text-white
+                        href="https://www.instagram.com/freshprinceofberlin/"
+                        className="flex items-center gap-2 px-7 py-3 text-lg rounded-full bg-pink-500 text-white
                                    hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105 hover:brightness-110"
                     >
-                        <FaInstagram /> Instagram
+                        <FaInstagram className="text-2xl" /> Instagram
                     </a>
                     <a
-                        href="#"
-                        className="flex items-center gap-2 px-5 py-2 rounded-full bg-black text-white
+                        href="https://www.tiktok.com/@freshprinceofberlin"
+                        className="flex items-center gap-2 px-7 py-3 text-lg rounded-full bg-black text-white
                                    hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105 hover:brightness-110"
                     >
-                        <FaTiktok /> TikTok
+                        <FaTiktok className="text-2xl" /> TikTok
                     </a>
                     <a
                         href="https://www.youtube.com/@freshprinceofberlin"
-                        className="flex items-center gap-2 px-5 py-2 rounded-full bg-red-600 text-white
+                        className="flex items-center gap-2 px-7 py-3 text-lg rounded-full bg-red-600 text-white
                                    hover:bg-red-700 transition duration-300 ease-in-out transform hover:scale-105 hover:brightness-110"
                     >
-                        <FaYoutube /> YouTube
+                        <FaYoutube className="text-2xl" /> YouTube
                     </a>
                     <a
                         href="https://www.twitch.tv/leoausberlin"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-5 py-2 rounded-full bg-purple-600 text-white
-                                  hover:bg-purple-700 transition duration-300 ease-in-out transform hover:scale-105 hover:brightness-110 text-sm"
+                        className="flex items-center gap-2 px-7 py-3 text-lg rounded-full bg-purple-600 text-white
+                                  hover:bg-purple-700 transition duration-300 ease-in-out transform hover:scale-105 hover:brightness-110"
                     >
-                        <FaTwitch /> Twitch
+                        <FaTwitch className="text-2xl" /> Twitch
                     </a>
                 </div>
             </div>
