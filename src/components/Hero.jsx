@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { FaInstagram, FaTiktok, FaYoutube, FaTwitch } from 'react-icons/fa';
+import { FaInstagram, FaTiktok, FaYoutube, FaTwitch, FaDiscord } from 'react-icons/fa';
 import HeroImage from '../assets/Leo5.jpeg';
 
 const Hero = () => {
@@ -82,6 +82,15 @@ const Hero = () => {
                                   hover:bg-purple-700 transition duration-300 ease-in-out transform hover:scale-105 hover:brightness-110"
                     >
                         <FaTwitch className="text-2xl" /> Twitch
+                    </a>
+                    <a
+                        href="https://discord.com/invite/BCvwn5MGFf"
+                        className="flex items-center gap-2 px-7 py-3 text-lg rounded-full bg-indigo-600 text-white
+                            hover:bg-indigo-700 transition duration-300 ease-in-out transform hover:scale-105 hover:brightness-110"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <FaDiscord className="text-2xl" /> Discord
                     </a>
                 </div>
             </div>
