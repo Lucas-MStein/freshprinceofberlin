@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import leo8 from '../assets/gallery/Leo8.jpeg';
-import leo3 from '../assets/gallery/Leo3.jpeg';
-import leo11 from '../assets/gallery/Leo11.jpeg';
+import leo8 from '../assets/gallery/Leo8.webp';
+import leo3 from '../assets/gallery/Leo3.webp';
+import leo11 from '../assets/gallery/Leo11.webp';
 
 const ImageGallery = () => {
     const images = [leo8, leo3, leo11];
