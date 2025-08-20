@@ -27,6 +27,29 @@
   <meta name="twitter:title" content="freshprinceofberlin – Comedy & Reactions" />
   <meta name="twitter:description" content="Leo aka freshprinceofberlin bringt dich zum Lachen – TikTok, YouTube, Instagram." />
   <meta name="twitter:image" content="https://freshprinceofberlin.com/og-preview.jpg" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ3ZL0ED48"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    // Basis-Konfiguration
+    gtag('config', 'G-MZ3ZL0ED48', {
+      anonymize_ip: true,                          // DSGVO-freundlicher
+      page_path: location.pathname + location.search + location.hash
+    });
+
+    // Optional: zusätzliche Pageviews bei Hash-Navigation (Anker-Links)
+    window.addEventListener('hashchange', function () {
+      gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: location.href,
+        page_path: location.pathname + location.search + location.hash
+      });
+    });
+  </script>
 </head>
 
 <body>
