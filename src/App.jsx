@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Platforms from './components/Platforms';
 import ImageGallery from './components/ImageGallery';
 import About from './components/About';
 import SocialLinks from './components/SocialLinks';
@@ -8,19 +9,15 @@ import Footer from './components/Footer';
 
 function App() {
     return (
-        <div className="bg-black text-white font-sans">
-            {/* Fixierter Header */}
+        <div className="bg-brand-black text-brand-off font-inter antialiased overflow-x-hidden">
             <Header />
-
-            {/* Hauptinhalt mit Abstand zum Header */}
-            <main className>
+            <main>
                 <Hero />
+                <Platforms />
                 <ImageGallery />
                 <About />
                 <SocialLinks />
             </main>
-
-            {/* Footer */}
             <Footer />
         </div>
     );

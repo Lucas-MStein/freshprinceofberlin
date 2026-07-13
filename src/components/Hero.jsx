@@ -1,98 +1,61 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { FaInstagram, FaTiktok, FaYoutube, FaTwitch, FaDiscord } from 'react-icons/fa';
+import React from 'react';
+import { motion } from 'motion/react';
+import { ArrowRight } from 'lucide-react';
 import HeroImage from '../assets/Leo5.webp';
 
 const Hero = () => {
-    const sectionRef = useRef(null);
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
-            },
-            { threshold: 0.9 }
-        );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
-            }
-        };
-    }, []);
-
     return (
-        <section id="hero" className="relative w-full h-screen">
-            {/* Hintergrundbild */}
-            <img
-                src={HeroImage}
-                alt="Berlin"
-                className="absolute inset-0 w-full h-full object-cover"
-            />
-            {/* Schattierung */}
-            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <section
+            id="hero"
+            className="relative min-h-screen flex flex-col justify-end pt-40 md:pt-48 pb-24 md:pb-32 px-6 md:px-12"
+        >
+            <div className="absolute inset-0 z-0">
+                <img
+                    src={HeroImage}
+                    alt="Leo, Fresh Prince of Berlin, in urbaner Kulisse"
+                    className="w-full h-full object-cover opacity-70"
+                    loading="eager"
+                    fetchpriority="high"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/60 to-brand-black/10" />
+            </div>
 
-            {/* Sichtbarer Content */}
-            <div
-                ref={sectionRef}
-                className={`relative z-10 flex flex-col items-center justify-center h-full text-center px-4 transition-all duration-1000 ease-out ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-                }`}
-            >
-                <h1 className="text-4xl sm:text-6xl font-bold text-blue-400 drop-shadow-md">
-                    Der Berliner, der das Internet zum Lachen bringt.
-                </h1>
-                <p className="mt-4 text-lg sm:text-xl text-gray-100">
-                    Leo aka freshprinceofberlin – bekannt für virale Comedy-Skits und Urban Culture.
-                </p>
+            <div className="relative z-10 w-full max-w-[1440px] mx-auto">
+                <motion.h1
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    className="font-anton text-[3.75rem] sm:text-7xl md:text-[8rem] lg:text-[11rem] leading-[0.85] uppercase tracking-tight text-brand-off"
+                >
+                    Fresh Prince<br />
+                    <span className="text-brand-yellow">Of Berlin</span>
+                </motion.h1>
 
-                <div className="mt-8 flex flex-wrap gap-4 justify-center">
-                    <a
-                        href="https://www.instagram.com/freshprinceofberlin/"
-                        className="flex items-center gap-2 px-7 py-3 text-lg rounded-full bg-pink-500 text-white
-                                   hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105 hover:brightness-110"
-                    >
-                        <FaInstagram className="text-2xl" /> Instagram
-                    </a>
-                    <a
-                        href="https://www.tiktok.com/@freshprinceofberlin"
-                        className="flex items-center gap-2 px-7 py-3 text-lg rounded-full bg-black text-white
-                                   hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105 hover:brightness-110"
-                    >
-                        <FaTiktok className="text-2xl" /> TikTok
-                    </a>
-                    <a
-                        href="https://www.youtube.com/@freshprinceofberlin"
-                        className="flex items-center gap-2 px-7 py-3 text-lg rounded-full bg-red-600 text-white
-                                   hover:bg-red-700 transition duration-300 ease-in-out transform hover:scale-105 hover:brightness-110"
-                    >
-                        <FaYoutube className="text-2xl" /> YouTube
-                    </a>
-                    <a
-                        href="https://www.twitch.tv/leoausberlin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-7 py-3 text-lg rounded-full bg-purple-600 text-white
-                                  hover:bg-purple-700 transition duration-300 ease-in-out transform hover:scale-105 hover:brightness-110"
-                    >
-                        <FaTwitch className="text-2xl" /> Twitch
-                    </a>
-                    <a
-                        href="https://discord.com/invite/BCvwn5MGFf"
-                        className="flex items-center gap-2 px-7 py-3 text-lg rounded-full bg-indigo-600 text-white
-                            hover:bg-indigo-700 transition duration-300 ease-in-out transform hover:scale-105 hover:brightness-110"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaDiscord className="text-2xl" /> Discord
-                    </a>
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.25 }}
+                    className="flex flex-col md:flex-row md:items-center gap-8 md:gap-16 mt-12 md:mt-20"
+                >
+                    <p className="font-inter text-lg sm:text-xl md:text-2xl text-brand-off/90 max-w-md font-medium leading-relaxed border-l-4 border-brand-red pl-5 md:pl-8">
+                        Comedy aus Berlin. Direkt, echt und für sehr viele Bildschirme.
+                    </p>
+
+                    <div className="flex flex-col sm:flex-row gap-4">
+                        <a
+                            href="#highlights"
+                            className="bg-brand-off text-brand-black px-8 py-5 md:px-10 md:py-6 font-inter font-bold tracking-widest text-sm md:text-base uppercase hover:bg-brand-yellow transition-colors flex items-center justify-center gap-3"
+                        >
+                            Galerie ansehen <ArrowRight size={20} />
+                        </a>
+                        <a
+                            href="#kontakt"
+                            className="border-2 border-brand-off text-brand-off px-8 py-5 md:px-10 md:py-6 font-inter font-bold tracking-widest text-sm md:text-base uppercase hover:bg-brand-off hover:text-brand-black transition-colors flex items-center justify-center"
+                        >
+                            Business anfragen
+                        </a>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

@@ -12,8 +12,10 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon.png" />
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Lily+Script+One&display=swap" rel="stylesheet" />
 
   <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:title" content="freshprinceofberlin – Reactions & Skits von Leo" />
@@ -28,28 +30,6 @@
   <meta name="twitter:description" content="Leo aka freshprinceofberlin bringt dich zum Lachen – TikTok, YouTube, Instagram." />
   <meta name="twitter:image" content="https://freshprinceofberlin.com/og-preview.jpg" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ3ZL0ED48"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    // Basis-Konfiguration
-    gtag('config', 'G-MZ3ZL0ED48', {
-      anonymize_ip: true,                          // DSGVO-freundlicher
-      page_path: location.pathname + location.search + location.hash
-    });
-
-    // Optional: zusätzliche Pageviews bei Hash-Navigation (Anker-Links)
-    window.addEventListener('hashchange', function () {
-      gtag('event', 'page_view', {
-        page_title: document.title,
-        page_location: location.href,
-        page_path: location.pathname + location.search + location.hash
-      });
-    });
-  </script>
 </head>
 
 <body>
